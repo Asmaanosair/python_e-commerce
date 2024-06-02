@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+   <head>
+ 
+      <title>  {% block page_title %} {% endblock  %}</title>
+
+    {% include "component/header.html"  %} 
+   </head>
+   <body>
+      <!-- loader Start -->
+      {% comment %} <div id="loading">
+         <div id="loading-center">
+         </div>
+      </div> {% endcomment %}
+      <!-- loader END -->
+      <!-- Wrapper Start -->
+      <div class="wrapper">
+         <!-- Sidebar  -->
+         {% include  'component/side.html' %} 
+         <!-- TOP Nav Bar -->
+        
+         {% include 'component/nav.html' %} 
+         <!-- TOP Nav Bar END -->
+         <!-- Page Content  -->
+        
+         {% block content %} {% endblock  %}
+ 
+     
+      </div>
+      <!-- Wrapper END -->
+      <!-- Footer -->
+     {% include "component/footer.html" %}
+      
+     {% include "component/script.html" %} 
+ 
+     
+   </body>
+</html>
