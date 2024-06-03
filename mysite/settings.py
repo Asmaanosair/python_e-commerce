@@ -33,6 +33,7 @@ handler404 = 'admin_dashboard.views.custom_404_view_name'
 INSTALLED_APPS = [
     'blog',
     'mysite',
+    'category',
     'admin_dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
