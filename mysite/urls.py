@@ -20,5 +20,6 @@ handler404 = 'admin_dashboard.views.custom_404'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.url')),
-     path('admin-dashboard/',include('admin_dashboard.urls'))
+    path('admin-dashboard/',include('admin_dashboard.urls')),
+    path('category/',include('category.urls'))
 ]

@@ -1,0 +1,71 @@
+{% extends "base.html" %} 
+ 
+{% block page_title %}Blank {% endblock  %}
+{%block content%}
+<div id="content-page" class="content-page">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-12">
+               <div class="iq-card">
+                     <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                           <h4 class="card-title">Category Table</h4>
+                        </div>
+                     </div>
+                     <div class="iq-card-body">
+                      <div id="table" class="table-editable">
+                        <span class="table-add float-right mb-3 mr-2">
+                           <button class="btn btn-sm iq-bg-success"><i
+                              class="ri-add-fill"><span class="pl-1">Add New</span></i>
+                           </button>
+                        </span>
+                        <div class="table-responsive">
+                           <table class="table">
+                              <thead>
+                            
+                                 <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Slug</th>
+                                    <th scope="col">Active</th>
+                                    <th scope="col">Action</th>
+                                
+                                 </tr>
+                                
+                              </thead>
+                              <tbody>
+                                {% for category in categories %}
+                                  <tr>
+                                    <th scope="row">{{ category.id }}</th>
+                                    <td>{{ category.name }}</td>
+                                    <td>{{ category.slug }}</td>
+                                    <td>
+                                        {% if category.active %}
+                                        <span class="badge dark-icon-light iq-bg-primary">Active</span>
+                                        {% else %}
+                                        <span class="badge iq-bg-danger">Inactive</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="flex align-items-center list-user-action">
+                                            <a class="iq-bg-success" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show" href="{{ category.get_absolute_url }}"" aria-describedby="tooltip209605"><i class="ri-eye-line"></i></a>
+
+                                            <a class="iq-bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#" aria-describedby="tooltip209605"><i class="ri-pencil-line"></i></a>
+                                            <a class="iq-bg-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
+                                         </div>
+                                    </td>
+                                  </tr>
+                                 
+                                {% endfor %}
+                              </tbody>
+                           </table>
+                        </div>
+                      </div>
+                  </div>
+               </div>
+         </div>
+      </div>
+
+   </div>
+</div>
+ {% endblock  %}
