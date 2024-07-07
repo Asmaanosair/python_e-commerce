@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog',
     'mysite',
     'category',
+    'section',
     'admin_dashboard',
     'django.contrib.admin',
     'django.contrib.auth',

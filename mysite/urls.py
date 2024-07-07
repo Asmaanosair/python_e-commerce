@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.url')),
     path('admin-dashboard/',include('admin_dashboard.urls')),
-    path('category/',include('category.urls'))
+    path('category/',include('category.urls')),
+    path('section/',include('section.urls')),
 ]
