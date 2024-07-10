@@ -7,3 +7,4 @@ class Section (models.Model) :
     active=models.BooleanField(default=False)
     slug=models.SlugField(default="",blank=True)
     category = models.ForeignKey("category", verbose_name=("category"), on_delete=models.CASCADE, related_name="models")
+    
